@@ -8,6 +8,9 @@
 S1            | VLAN 1        | 192.168.11.251/24
 Linux         | NIC           | 192.168.11.1/24
 
+## Команды настройки S1
+` hostname s1` 
+
 ## Конфигурация S1
 
     sw1#show running-config 
