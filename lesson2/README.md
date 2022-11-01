@@ -138,5 +138,18 @@ Linux         | NIC           | 192.168.11.1/24
     !         
     end       
 
+### Эхо запрос с sw1 до сервера Linux
+
+    sw1>ping 192.168.11.1 
+    Type escape sequence to abort.
+    Sending 5, 100-byte ICMP Echos to 192.168.11.1, timeout is 2 seconds:
+    !!!!!
+    Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+    sw1>
+
+### Получение доступа по telnet с сервера Linux на sw1
+
+![](https://github.com/egoruzmukhametov/otus-eduaction/blob/main/lesson2/telnet.png)
+
 # Тестовое окружение:
 Лаборатория на базе eve-ng
