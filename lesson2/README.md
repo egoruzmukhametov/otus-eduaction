@@ -9,7 +9,38 @@ S1            | VLAN 1        | 192.168.11.251/24
 Linux         | NIC           | 192.168.11.1/24
 
 ## Команды настройки S1
-` hostname s1` 
+
+    Switch>enable 
+    Switch#configure terminal 
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    Switch(config)#hostname sw1
+    sw1(config)#line console 0
+    sw1(config-line)#password 123456
+    sw1(config-line)#login
+    sw1(config-line)#exit
+    sw1(config)#line vty 0 4
+    sw1(config-line)#password 123456
+    sw1(config-line)#login
+    sw1(config-line)#end
+    sw1#
+    *Nov  1 15:23:04.312: %SYS-5-CONFIG_I: Configured from console by console
+    sw1#configure terminal 
+    Enter configuration commands, one per line.  End with CNTL/Z.
+    sw1(config)#line aux 0
+    sw1(config-line)#login
+    % Login disabled on line 1, until 'password' is set
+    sw1(config-line)#exit
+    sw1(config)#service password-encryption 
+    sw1(config)#enable secret 123456
+    sw1(config)#banner motd \Authorized access only!\
+    sw1(config)#interface vlan 1
+    sw1(config-if)#ip address 192.168.11.251 255.255.255.0
+    sw1(config-if)#no shutdown 
+    sw1(config-if)#exit
+    sw1#copy running-config startup-config
+    Destination filename [startup-config]? 
+    Building configuration...
+    Compressed configuration from 945 bytes to 685 bytes[OK]
 
 ## Конфигурация S1
 
