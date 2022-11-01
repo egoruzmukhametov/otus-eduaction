@@ -42,6 +42,10 @@ Linux         | NIC           | 192.168.11.1/24
     Building configuration...
     Compressed configuration from 945 bytes to 685 bytes[OK]
 
+## Конфигурация сети на Linux
+
+![](https://github.com/egoruzmukhametov/otus-eduaction/blob/main/lesson2/linux_settings.png)
+
 ## Конфигурация S1
 
     sw1#show running-config 
