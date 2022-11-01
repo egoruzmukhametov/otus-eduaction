@@ -5,7 +5,7 @@
 
   Устройство  |   Интерфейс   | IP-адрес / префикс
 ------------- | ------------- | -------------
-Content Cell  | Content Cell  | Content Cell
-Content Cell  | Content Cell. | Content Cell
+S1            | VLAN 1        | 192.168.11.251/24
+Linux         | NIC           | 192.168.11.1/24
 # Тестовое окружение:
 Лаборатория на базе eve-ng
