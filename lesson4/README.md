@@ -12,10 +12,9 @@ PC2           | eth0          | 192.168.11.2/24
 
 ## Конфигурация sw1
 <details>
-  <summary>Click me</summary>
-    sw1#show running-config 
+  <summary>sw1#show running-config</summary>
+     
     Building configuration...    
-
     Current configuration : 1074 bytes
     !
     ! Last configuration change at 06:52:26 EST Thu Nov 3 2022
