@@ -104,3 +104,102 @@ PC2           | eth0          | 192.168.11.2/24
     !
     end
 </details>
+
+
+## Конфигурация sw2
+<details>
+  <summary>sw2#show running-config</summary>
+
+    sw2#show running-config 
+    Building configuration...    
+
+    Current configuration : 1020 bytes
+    !
+    ! Last configuration change at 06:52:28 EST Thu Nov 3 2022
+    !
+    version 15.2
+    service timestamps debug datetime msec
+    service timestamps log datetime msec
+    service password-encryption
+    service compress-config
+    !
+    hostname sw2
+    !
+    boot-start-marker
+    boot-end-marker
+    !
+    !
+    !
+    no aaa new-model
+    clock timezone EST -5 0
+    !
+    !
+    !
+    !         
+    !
+    !
+    !
+    !
+    ip cef
+    no ipv6 cef
+    !
+    !
+    spanning-tree mode pvst
+    spanning-tree extend system-id
+    !
+    vlan internal allocation policy ascending
+    !
+    ! 
+    !
+    !
+    !
+    !
+    !
+    !
+    !
+    !
+    !         
+    !
+    !
+    interface Ethernet0/0
+    !
+    interface Ethernet0/1
+    !
+    interface Ethernet0/2
+    !
+    interface Ethernet0/3
+    !
+    interface Vlan1
+     ip address 192.168.11.252 255.255.255.0
+    !
+    ip forward-protocol nd
+    !
+    no ip http server
+    no ip http secure-server
+    !
+    !
+    !
+    !
+    !
+    !         
+    control-plane
+    !
+    banner motd ^C
+    ###############################################
+    #########Authorized access only!!##############
+    ###############################################
+    ^C
+    !
+    line con 0
+     password 7 055A545C751918
+     logging synchronous
+     login
+    line aux 0
+     login
+    line vty 0 4
+     password 7 1446405858517C
+     login
+    !
+    !
+    end
+</details>
