@@ -1,6 +1,6 @@
 # Лабораторная работа. Просмотр таблицы MAC-адресов коммутатора 
 
-![]https://github.com/egoruzmukhametov/otus-eduaction/blob/main/lesson4/Screenshot%202022-11-03%20at%2013.53.39.png?raw=true)
+![](https://github.com/egoruzmukhametov/otus-eduaction/blob/main/lesson4/Screenshot%202022-11-03%20at%2013.53.39.png?raw=true)
 ## Таблица адресации
 
   Устройство  |   Интерфейс   | IP-адрес / префикс
