@@ -203,6 +203,42 @@ PC2           | eth0          | 192.168.11.2/24
     end
 </details>
 
+## Конфигурация сети на PC1
+<details>
+  <summary>cat /etc/network/interfaces</summary>
+    # This file describes the network interfaces available on your system
+    # and how to activate them. For more information, see interfaces(5).    
+
+    # The loopback network interface
+    auto lo
+    iface lo inet loopback    
+
+    # The normal eth0
+    auto eth0
+    allow-hotplug eth0
+    iface eth0 inet static
+        address 192.168.11.1/24
+        gateway 192.168.11.254
+        hwaddress ether 50:00:00:01:00:00
+        mtu 1500    
+    
+
+    # Additional interfaces, just in case we're using
+    # multiple networks
+    allow-hotplug eth1
+    iface eth1 inet dhcp    
+
+    allow-hotplug eth2
+    iface eth2 inet dhcp    
+
+    # Set this one last, so that cloud-init or user can
+    # override defaults.
+    source /etc/network/interfaces.d/*
+
+</details>
+
+
+
 ## Конфигурация сети на PC2
 <details>
   <summary>cat /etc/network/interfaces</summary>
@@ -218,14 +254,11 @@ PC2           | eth0          | 192.168.11.2/24
     allow-hotplug eth0
     iface eth0 inet static
         address 192.168.11.2/24
-        up route add -net 192.168.11.0 netmask 255.255.255.0 gw 192.168.11.254
-        down route del -net 192.168.11.0 netmask 255.255.255.0 gw 192.168.11.244
+        gateway 192.168.11.254
         mtu 1500    
-    
 
     # Additional interfaces, just in case we're using
     # multiple networks
-    auto eth1
     allow-hotplug eth1
     iface eth1 inet dhcp    
 
@@ -235,5 +268,5 @@ PC2           | eth0          | 192.168.11.2/24
     # Set this one last, so that cloud-init or user can
     # override defaults.
     source /etc/network/interfaces.d/*
-</details>
 
+</details>
