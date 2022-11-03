@@ -11,7 +11,8 @@ PC1           | eth0          | 192.168.11.1/24
 PC2           | eth0          | 192.168.11.2/24
 
 ## Конфигурация sw1
-
+<details>
+  <summary>Click me</summary>
     sw1#show running-config 
     Building configuration...    
 
@@ -103,4 +104,4 @@ PC2           | eth0          | 192.168.11.2/24
     !
     !
     end
-
+</details>
