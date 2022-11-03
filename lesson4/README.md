@@ -1,11 +1,11 @@
 # Лабораторная работа. Просмотр таблицы MAC-адресов коммутатора 
 
-![](https://github.com/egoruzmukhametov/otus-eduaction/blob/main/lesson4/Screenshot%202022-11-03%20at%2013.53.39.png?raw=true)
+![](https://github.com/egoruzmukhametov/otus-eduaction/blob/main/lesson4/topology2.png)
 ## Таблица адресации
 
   Устройство  |   Интерфейс   | IP-адрес / префикс
 ------------- | ------------- | -------------
-S1            | VLAN 1        | 192.168.11.251/24
-S2            | VLAN 1        | 192.168.11.252/24
+sw1           | VLAN 1        | 192.168.11.251/24
+sw2           | VLAN 1        | 192.168.11.252/24
 PC1           | eth0          | 192.168.11.1/24
 PC2           | eth0          | 192.168.11.2/24
